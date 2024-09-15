@@ -6,7 +6,8 @@ p input {
     display: inline-block;
 }
 
-#result {
+#result,
+#result2 {
     padding: 10px;
     border: 2px solid rgb(154, 154, 154);
     border-radius: 2px;

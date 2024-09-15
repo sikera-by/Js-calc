@@ -26,6 +26,8 @@
 
     </p>
 
+    <p id="result2"></p>
+
     <script>
         let name = 'Nikita Targonsky'
         console.log(name)
@@ -36,7 +38,6 @@
         let n2 = document.getElementById('btn2')
         let res = document.getElementById('btn5')
         let pRes = document.getElementById('result')
-
         res.onclick = function () {
             let oprs = document.getElementsByName('event')
             for (let i = 0; i < oprs.length; i++) {
@@ -80,7 +81,10 @@
 
         for (let i = 0; i < 10; i++) {
             array2[i] = intRandNumber(10, 101)
-            pRes.innerHTML += `${array2[i]}, `
+            pRes.innerHTML += `${array2[i]} , `
+            if (array2[i] % 5 == 0) {
+                result2.innerHTML += `${array2[i]} , `
+            }
         }
 
     </script>
