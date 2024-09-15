@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>First one</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+
+    <input type="number" id="btn1">
+    <input type="number" id="btn2">
+    <!-- <input type="number" id="btn3"
+    <input type="number" id="btn4"> -->
+    <p>
+        <input type="radio" value="+" name="event">+
+        <input type="radio" value="-" name="event">-
+        <input type="radio" value="*" name="event">*
+        <input type="radio" value="/" name="event">/
+    </p>
+    <input type="button" id="btn5" value="Вычислить">
+
+    <p id="result">
+
+    </p>
+
+    <script>
+        let name = 'Nikita Targonsky'
+        console.log(name)
+
+        //==========================
+
+        let n1 = document.getElementById('btn1')
+        let n2 = document.getElementById('btn2')
+        let res = document.getElementById('btn5')
+        let pRes = document.getElementById('result')
+
+        res.onclick = function () {
+            let oprs = document.getElementsByName('event')
+            for (let i = 0; i < oprs.length; i++) {
+                if (oprs[i].checked) {
+                    let op1 = oprs[i].value;
+                    pRes.innerHTML = eval(`${n1.value} ${op1} ${n2.value}`)
+                }
+            }
+        }
+
+        //=======МАССИВЫ===========
+
+        let array1 = [1];
+        for (let i = 0; i < array1.length; i++) {
+            //console.log(i, array1[i])
+
+            // if (array1[i] % 2 != 0) {//не/четное
+            //     console.log(array1[i])
+            // }
+
+            // if (array1[i] % 3 == 0) { //положительные
+            //     console.log(array1[i] ** 2)
+            // }
+
+            // if (array1[i] > 0) { //положительные
+            //     console.log(array1[i])
+            // }
+
+            //РАНДОМНЫЕ ЧИСЛА
+
+            console.log(Math.random(array1))
+
+            function intRandNumber(min, max) {
+                return Math.ceil(Math.random() * (max - min) + min)
+            }
+        }
+
+        console.log(intRandNumber(10, 20))
+
+    </script>
+</body>
+
+</html>
